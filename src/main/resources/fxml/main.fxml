@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.jsch_sftp.controller.MainController">
+    <VBox xmlns:fx="http://javafx.com/fxml" spacing="10" alignment="CENTER">
+        <Label text="SFTP File Upload Service" />
+
+        <HBox spacing="10">
+            <Label text="SFTP Host:" />
+            <TextField fx:id="sftpHostField" />
+        </HBox>
+
+        <HBox spacing="10">
+            <Label text="SFTP Port:" />
+            <TextField fx:id="sftpPortField" />
+        </HBox>
+
+        <HBox spacing="10">
+            <Label text="SFTP Username:" />
+            <TextField fx:id="sftpUsernameField" />
+        </HBox>
+
+        <HBox spacing="10">
+            <Label text="SFTP Password:" />
+            <PasswordField fx:id="sftpPasswordField" />
+        </HBox>
+
+        <HBox spacing="10">
+            <Label text="Local Directory:" />
+            <TextField fx:id="localDirField" />
+            <Button text="Browse" onAction="#handleBrowseLocal" />
+        </HBox>
+
+        <HBox spacing="10">
+            <Label text="Remote Directory:" />
+            <TextField fx:id="remoteDirField" text="/C:/Users/eosst/Downloads" />
+        </HBox>
+
+        <HBox spacing="10">
+            <Label text="Check Interval (seconds):" />
+            <TextField fx:id="checkIntervalField" />
+        </HBox>
+
+        <HBox spacing="10">
+            <Button fx:id="startServiceButton" text="Start Service" onAction="#handleStartService" />
+            <Button fx:id="stopServiceButton" text="Stop Service" onAction="#handleStopService" />
+            <Button text="Save Sftp Settings" onAction="#handleSaveSettings" />
+        </HBox>
+
+        <TextArea fx:id="logArea" prefHeight="200" prefWidth="400" />
+    </VBox>
+</AnchorPane>
